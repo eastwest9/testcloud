@@ -19,8 +19,18 @@
 </head>
 <body>
     <h1>2018305075_최동석</h1>
-    <a href="#" onclick="location.href='test.html'">test</a>
-    <a href="#" onclick="location.href='cat.html'">cat</a>
+    <video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"> </video>
+    <script>
+        var myOptions = {
+            autoplay: true,
+            controls: true,
+            width: "640",
+            height: "400",
+            poster: ""
+        };
+        var myPlayer = amp("azuremediaplayer", myOptions);
+        myPlayer.src([{ src: "https://storagetest-koct1.streaming.media.azure.net/45ff69db-28d2-4624-b49f-bc4125418cea/test.ism/manifest(format=m3u8-cmaf)", type: "application/vnd.ms-sstr+xml" }, ]);
+    </script>
     <footer>
         <br />
         <p>클라우드컴퓨팅 스트리밍 서비스</p>
